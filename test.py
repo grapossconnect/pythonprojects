@@ -8,16 +8,6 @@ import pytest
 from selenium import webdriver
 
 
-@pytest.fixture(scope="class")
-def setup():
-    global driver
-    # driver = webdriver.Chrome(executable_path="C:\\chromedriver.exe")
-    driver = webdriver.Chrome()
-    driver.maximize_window()
-
-    return driver
-
-
 class TestDefaultSuite:
     def setup_method(self, method):
         self.driver = webdriver.Chrome()
