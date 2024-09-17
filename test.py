@@ -4,6 +4,18 @@ import pytest
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.select import Select
+import pytest
+from selenium import webdriver
+
+
+@pytest.fixture(scope="class")
+def setup():
+    global driver
+    # driver = webdriver.Chrome(executable_path="C:\\chromedriver.exe")
+    driver = webdriver.Chrome()
+    driver.maximize_window()
+
+    return driver
 
 
 class TestDefaultSuite:
