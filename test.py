@@ -6,7 +6,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.select import Select
 
 
-class TestDefaultSuite():
+class TestDefaultSuite:
     def setup_method(self, method):
         self.driver = webdriver.Chrome()
         self.vars = {}
